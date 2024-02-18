@@ -30,7 +30,7 @@ ENEMY_COLOR = 3  # enemy
 
 # Initialize objects
 agent = QLearningAgent(board_size=BOARD_SIZE, start_q_table=start_q_table, learning_rate=LEARNING_RATE, discount=DISCOUNT, epsilon=epsilon, eps_decay=EPS_DECAY)
-env = GameEnvironment(board_size=BOARD_SIZE, episodes=FULL_EPISODES, move_penalty=MOVE_PENALTY, enemy_penalty=ENEMY_PENALTY, food_reward=FOOD_REWARD, show_every=SHOW_EVERY)
+env = GameEnvironment(board_size=BOARD_SIZE)
 
 # Start Iteration
 episode_rewards = []
@@ -105,9 +105,11 @@ for episode in range(FULL_EPISODES):
         # Just for Visualization
         if show:
             visualization_env = np.zeros((BOARD_SIZE, BOARD_SIZE, 3), dtype=np.uint8)
+            # Draw stuff
             visualization_env[food.x][food.y] = blob_colors[FOOD_COLOR]
             visualization_env[player.x][player.y] = blob_colors[PLAYER_COLOR]
             visualization_env[enemy.x][enemy.y] = blob_colors[ENEMY_COLOR]
+            # Draw Image
             img = Image.fromarray(visualization_env, 'RGB')
             img = img.resize((1000, 1000), Image.NEAREST)
             cv2.imshow("QAgent", np.array(img))
