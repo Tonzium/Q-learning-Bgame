@@ -1,6 +1,4 @@
-from classes import Blob
-from classes import QLearningAgent
-from classes import GameEnvironment
+from classes import Blob, QLearningAgent, GameEnvironment
 import numpy as np
 from PIL import Image
 import cv2
