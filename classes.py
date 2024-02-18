@@ -1,7 +1,6 @@
 import numpy as np
 import pickle
 
-
 # Blob class definition
 class Blob:
     """
@@ -49,6 +48,15 @@ class Blob:
         # Boundary conditions
         self.x = max(0, min(self.x, self.board_size - 1))
         self.y = max(0, min(self.y, self.board_size - 1))
+
+class Cliff:
+    def __init__(self, x, y, color=(0, 0, 0)):
+        self.x = x
+        self.y = y
+        self.color = color
+
+    def __str__(self):
+        return f"Cliff(position=({self.x}, {self.y}), color={self.color})"
 
 # QLearningAgent class definition
 class QLearningAgent:
@@ -98,14 +106,8 @@ class GameEnvironment:
     """
     Board and colours
     """
-    def __init__(self, board_size, episodes, move_penalty, enemy_penalty, food_reward, show_every):
+    def __init__(self, board_size):
         self.board_size = board_size
-        self.episodes = episodes
-        self.move_penalty = move_penalty
-        self.enemy_penalty = enemy_penalty
-        self.food_reward = food_reward
-        self.show_every = show_every
-        self.colors = {1: (255, 175, 0), 2: (0, 255, 0), 3: (0, 0, 255)}  # 1:Player, 2:Food, 3:Enemy
 
     # To make sure there is no overlapping spawns
     def spawn_blob(self, exclude_positions, color):
