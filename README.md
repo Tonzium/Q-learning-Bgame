@@ -34,9 +34,9 @@ The core of the project is built around three main components: the Blob class, t
 
 `-` Start training :)
 
-### Now you should have your own q_table
+### Lets visualize your q agent playing the game
 
-`-` Set start_q_table = "name_of_your_q_table"
+`-` Set start_q_table = "name_of_your_q_table.pickle"
 
 `-` FULL_EPISODES = 10 (or some small number)
 
