@@ -1,6 +1,6 @@
 # Reinforcement Learning Blob Environment
 
-
+![Example Image](Smoothed_Plot_training.png)
 
 
 This project implements a simple grid-based reinforcement learning environment where agents, represented as "blobs", navigate to achieve goals such as reaching food while avoiding enemies.
