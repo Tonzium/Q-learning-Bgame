@@ -1,4 +1,4 @@
-# Reinforcement Learning Blob Environment
+# Q-learning Blob Environment
 
 ![Example Image](Smoothed_Plot_training.png) ![Example Image](Epsilon_decay.png)
 
