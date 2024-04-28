@@ -3,11 +3,14 @@
 This project implements a simple grid-based reinforcement learning environment where agents, represented as "blobs", navigate to achieve goals such as reaching food while avoiding enemies.
 The core of the project is built around three main components: the Blob class, the QLearningAgent class, and the GameEnvironment class. The system utilizes Q-learning, a model-free reinforcement learning algorithm, to enable the agent to learn from interactions with the environment.
 
+Game visualization
+![Game illustration](Q-agent-blob.png)
+
 Training reward
-![Example Image](Smoothed_Plot_training.png)
+![Training reward](Smoothed_Plot_training.png)
 
 Epsilon decay
-![Example Image](Epsilon_decay.png)
+![Epsilon decay](Epsilon_decay.png)
 
 ## Features
 
